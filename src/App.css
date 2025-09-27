@@ -1,0 +1,149 @@
+/* src/App.css */
+
+/* Importa a fonte 'Poppins' do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Estilos Globais */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1a1a2e; /* Fundo azul escuro */
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #a0a0c0;
+  margin-bottom: 2rem;
+}
+
+/* Tabuleiro do Jogo */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  justify-content: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Estilos e Animação do Card */
+.card {
+  width: 150px;
+  height: 150px;
+  perspective: 1000px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s, box-shadow 0.3s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+}
+
+.card:hover .card-inner {
+  box-shadow: 0 8px 24px rgba(45, 235, 255, 0.2);
+  transform: scale(1.02);
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-weight: 600;
+}
+
+.card-front {
+  background: linear-gradient(135deg, #16222A, #3A6073); /* Gradiente para o verso */
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/df/Sustainable_Development_Goals.svg');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  font-size: 1rem;
+  /* A cor de fundo virá do JSX */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Sombra no texto para legibilidade */
+}
+
+/* Mensagem de Vitória e Botão */
+.win-message {
+  margin-top: 30px;
+  background-color: rgba(22, 22, 46, 0.9);
+  padding: 30px 40px;
+  border-radius: 15px;
+  border: 1px solid #4a4a6a;
+  box-shadow: 0 0 20px rgba(45, 235, 255, 0.1);
+}
+
+.win-message h2 {
+  margin: 0 0 20px 0;
+  font-size: 2rem;
+  color: #4CAF50; /* Verde para vitória */
+}
+
+.win-message button {
+  background: linear-gradient(45deg, #4CAF50, #81C784);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.win-message button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+footer {
+  margin-top: 40px;
+  padding: 10px;
+  font-size: 0.9em;
+  color: #a0a0c0;
+}
