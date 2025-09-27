@@ -87,7 +87,6 @@ p {
   justify-content: center;
   text-align: center;
   padding: 10px;
-  color: white;
   font-weight: 600;
 }
 
@@ -102,8 +101,8 @@ p {
 .card-back {
   transform: rotateY(180deg);
   font-size: 1rem;
-  /* A cor de fundo virá do JSX */
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Sombra no texto para legibilidade */
+  color: #111;
+  text-shadow: none;
 }
 
 /* Mensagem de Vitória e Botão */
@@ -141,9 +140,23 @@ p {
   box-shadow: 0 6px 15px rgba(0,0,0,0.4);
 }
 
+/* Estilo do Rodapé de Créditos */
 footer {
   margin-top: 40px;
   padding: 10px;
   font-size: 0.9em;
   color: #a0a0c0;
+}
+
+/* Estilo para o link no rodapé */
+footer a {
+  color: #4dd0e1; /* Um tom de ciano para combinar com o tema */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }

@@ -106,7 +106,7 @@ function App() {
 
       {/* ASSINATURA ADICIONADA AQUI */}
       <footer>
-        <p>Desenvolvido por Dinarte Filho</p>
+        Desenvolvido por <a href="https://github.com/dinarteefilho" target="_blank" rel="noopener noreferrer">Dinarte Filho</a>
       </footer>
 
     </div>
