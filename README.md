@@ -2,6 +2,10 @@
 
 Um jogo da memória interativo e educativo, desenvolvido em React, que tem como objetivo ensinar e reforçar o conhecimento sobre os **Objetivos de Desenvolvimento Sustentável (ODS)** da ONU.
 
+## 🚀 Acessar o Jogo
+
+### **[Clique aqui para jogar](https://dinarteefilho.github.io/jogo-da-memoria-ODS/)**
+
 ## 🎯 Objetivos Educacionais
 
 Este jogo foi criado para promover a conscientização e familiarização com os seguintes ODS:
